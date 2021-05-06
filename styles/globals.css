@@ -11,6 +11,21 @@ a {
   text-decoration: none;
 }
 
+li {
+  margin-right: 8px;
+}
+
+input {
+  border-radius: 16px;
+  border: none;
+  padding: 24px 120px 24px 24px;
+  outline: none;
+}
+
+input::placeholder {
+  font-size: large;
+}
+
 * {
   box-sizing: border-box;
 }
