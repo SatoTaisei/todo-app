@@ -1,11 +1,11 @@
 import { React, useState } from "react";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import styles from "src/styles//Home.module.css";
 
 export default function Home() {
   const [todoText, setTodoText] = useState("");
-  const [incompleteTodos, setIncompleteTodos] = useState(["あああ", "いいい"]);
-  const [completeTodos, setCompleteTodos] = useState(["ううう"]);
+  const [incompleteTodos, setIncompleteTodos] = useState([]);
+  const [completeTodos, setCompleteTodos] = useState([]);
 
   const onChangeTodoText = (e) => setTodoText(e.target.value);
 
