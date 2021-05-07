@@ -30,7 +30,7 @@
   align-items: center;
 }
 
-.btn {
+.addButton {
   color: #333;
   font-size: medium;
   border-radius: 16px;
@@ -40,9 +40,22 @@
   background-color: #e8ffff;
 }
 
-.btn:hover {
+.addButton:hover {
   background-color: #60e9ff;
   color: #fff;
+  cursor: pointer;
+}
+
+.compDleteButton {
+  /* color: #333; */
+  font-size: medium;
+  border-radius: 16px;
+  border: none;
+  padding: 1%;
+  margin-left: 8px;
+}
+
+.compDleteButton:hover {
   cursor: pointer;
 }
 

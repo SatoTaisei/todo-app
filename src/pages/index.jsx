@@ -1,6 +1,8 @@
 import { React, useState } from "react";
-import Head from "next/head";
 import styles from "src/styles//Home.module.css";
+import { InputTodo } from "src/components/InputTodo";
+import { IncompleteTodos } from "src/components/IncompleteTodos";
+import { CompleteTodos } from "src/components/CompleteTodos";
 
 export default function Home() {
   const [todoText, setTodoText] = useState("");
@@ -44,52 +46,30 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <Head>
+      {/* <Head>
         <title>TODOリスト</title>
         <meta name="description" content="Let's start TODO-App" />
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </Head> */}
 
       {/* メイン画面 */}
       <main className={styles.main}>
         {/* 追加エリア */}
-        <div className={styles.input_area}>
-          <input
-            placeholder="TODOを入力"
-            value={todoText}
-            onChange={onChangeTodoText}
-          />
-          <button className={styles.btn} onClick={onClickAdd}>
-            追加
-          </button>
-        </div>
+        <InputTodo
+          todoText={todoText}
+          onChange={onChangeTodoText}
+          onClick={onClickAdd}
+        />
 
         {/* 未完了エリア */}
-        <div className={styles.imcomplete_area}>
-          <p className={styles.title}>未完了のTODO</p>
-          {incompleteTodos.map((todo, index) => {
-            return (
-              <ul key={todo} className={styles.list_row}>
-                <li>{todo}</li>
-                <button onClick={() => onClickComplete(index)}>完了</button>
-                <button onClick={() => onClickDelete(index)}>削除</button>
-              </ul>
-            );
-          })}
-        </div>
+        <IncompleteTodos
+          todos={incompleteTodos}
+          onClickComplete={onClickComplete}
+          onClickDelete={onClickDelete}
+        />
 
         {/* 完了エリア */}
-        <div className={styles.complete_area}>
-          <p className={styles.title}>完了のTODO</p>
-          {completeTodos.map((todo, index) => {
-            return (
-              <ul key={todo} className={styles.list_row}>
-                <li>{todo}</li>
-                <button onClick={() => onClickBack(index)}>戻す</button>
-              </ul>
-            );
-          })}
-        </div>
+        <CompleteTodos todos={completeTodos} onClickBack={onClickBack} />
       </main>
     </div>
   );
