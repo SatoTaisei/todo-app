@@ -1,17 +1,29 @@
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+  /* min-height: 100vh; */
+  width: auto;
+  /* padding: 0 0.5rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+}
+
+.header {
+  display: block;
+  width: 100%;
+  height: 50px;
+  background-color: #094067;
+  color: #fffffe;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 50px;
+  align-items: center;
+  padding-left: 12px;
 }
 
 .main {
-  width: 750px;
-  height: 1334px;
-  padding: 5rem 0;
+  /* width: 375px; */
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,29 +32,47 @@
 
 /* 以下、TODO用スタイル */
 .input_area {
-  background-color: #c1ffff;
-  width: 85%;
-  height: 10vh;
-  padding: 0 16px;
-  margin: 8px 0;
-  border-radius: 8px;
   display: flex;
   align-items: center;
+  margin: 20px 0;
+}
+
+.input_text {
+  width: 289px;
+  height: 50px;
+  font-size: 100%;
+  border-radius: 16px;
+  border: 4px solid #90b4ce;
+  padding-left: 12px;
+  outline: none;
+}
+
+.input_text::placeholder {
+  font-size: 16px;
+  line-height: 16px;
+  align-items: center;
+  vertical-align: middle;
+  color: #90b4ce;
 }
 
 .addButton {
-  color: #333;
-  font-size: medium;
-  border-radius: 16px;
-  border: none;
-  padding: 1.6vh;
-  margin: 16px;
-  background-color: #e8ffff;
+  width: 50px;
+  height: 50px;
+  background-color: #fffffe;
+  color: #90b4ce;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 28px;
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  border: 4px solid #90b4ce;
+  margin-left: 12px;
 }
 
 .addButton:hover {
-  background-color: #60e9ff;
-  color: #fff;
+  color: #094067;
+  border-color: #094067;
   cursor: pointer;
 }
 
@@ -61,21 +91,21 @@
 
 .imcomplete_area {
   background-color: #c6ffe2;
-  width: 85%;
+  width: 100%;
   min-height: 200px;
   height: 40vh;
   padding: 8px;
-  margin: 8px 0;
+  /* margin: 8px 0; */
   border-radius: 8px;
 }
 
 .complete_area {
   background-color: #ffffe0;
-  width: 85%;
+  width: 100%;
   min-height: 200px;
   height: 40vh;
   padding: 8px;
-  margin: 8px 0;
+  /* margin: 8px 0; */
   border-radius: 8px;
 }
 

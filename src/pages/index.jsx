@@ -46,12 +46,8 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      {/* <Head>
-        <title>TODOリスト</title>
-        <meta name="description" content="Let's start TODO-App" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head> */}
-
+      {/* ヘッダー */}
+      <header className={styles.header}>TODO</header>
       {/* メイン画面 */}
       <main className={styles.main}>
         {/* 追加エリア */}

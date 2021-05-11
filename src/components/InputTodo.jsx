@@ -6,9 +6,14 @@ export const InputTodo = (props) => {
 
   return (
     <div className={styles.input_area}>
-      <input placeholder="TODOを入力" value={todoText} onChange={onChange} />
+      <input
+        className={styles.input_text}
+        placeholder="やることを入力"
+        value={todoText}
+        onChange={onChange}
+      />
       <button className={styles.addButton} onClick={onClick}>
-        追加
+        ＋
       </button>
     </div>
   );

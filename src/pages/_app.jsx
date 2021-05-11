@@ -8,6 +8,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>TODOリスト</title>
         <meta name="description" content="Let's start TODO-App" />
+        <meta name="viewport" content="width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
