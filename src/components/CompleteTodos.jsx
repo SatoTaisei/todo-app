@@ -6,7 +6,7 @@ export const CompleteTodos = (props) => {
 
   return (
     <div className={styles.complete_area}>
-      <p className={styles.title}>完了のTODO</p>
+      <p className={styles.title}>完了</p>
       {todos.map((todo, index) => {
         return (
           <ul key={todo} className={styles.list_row}>
@@ -15,7 +15,7 @@ export const CompleteTodos = (props) => {
               className={styles.compDleteButton}
               onClick={() => onClickBack(index)}
             >
-              戻す
+              戻
             </button>
           </ul>
         );

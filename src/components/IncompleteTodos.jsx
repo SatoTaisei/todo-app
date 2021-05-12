@@ -6,7 +6,7 @@ export const IncompleteTodos = (props) => {
 
   return (
     <div className={styles.imcomplete_area}>
-      <p className={styles.title}>未完了のTODO</p>
+      <p className={styles.title}>TODO</p>
       {todos.map((todo, index) => {
         return (
           <ul key={todo} className={styles.list_row}>
@@ -15,14 +15,14 @@ export const IncompleteTodos = (props) => {
               className={styles.compDleteButton}
               onClick={() => onClickComplete(index)}
             >
-              完了
+              完
             </button>
 
             <button
               className={styles.compDleteButton}
               onClick={() => onClickDelete(index)}
             >
-              削除
+              削
             </button>
           </ul>
         );
