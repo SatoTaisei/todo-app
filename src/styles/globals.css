@@ -12,7 +12,7 @@ a {
 }
 
 li {
-  margin-right: 8px;
+  list-style-type: none;
 }
 
 * {

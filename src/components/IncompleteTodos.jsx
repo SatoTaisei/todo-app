@@ -10,13 +10,17 @@ export const IncompleteTodos = (props) => {
       {todos.map((todo, index) => {
         return (
           <ul key={todo} className={styles.list_row}>
-            <li>{todo}</li>
-            <button
+            <div className={styles.IncompleteTodosFlex}>
+              {/* 下まだ関数入れてない */}
+              <button className={styles.compDleteButton}>✔</button>
+              <li>{todo}</li>
+              {/* <button
               className={styles.compDleteButton}
               onClick={() => onClickComplete(index)}
-            >
-              完
-            </button>
+              >
+                完
+              </button> */}
+            </div>
 
             <button
               className={styles.compDleteButton}
