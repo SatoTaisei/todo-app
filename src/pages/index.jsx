@@ -4,7 +4,6 @@ import styles from "../styles/Home.module.css";
 export default function Home() {
   const [todoText, setTodoText] = useState("");
   const [displayTodos, setDisplayTodos] = useState([]);
-  const [checkFlag, setCheckFlag] = useState(false);
 
   return (
     <div className={styles.container}>
@@ -25,7 +24,8 @@ export default function Home() {
             className={styles.addButton}
             onClick={() => {
               if (todoText === "") return;
-              const newTodos = [...displayTodos, todoText];
+              const newTodo = { label: todoText, isDone: false };
+              const newTodos = [...displayTodos, newTodo];
               setDisplayTodos(newTodos);
               setTodoText("");
             }}
@@ -38,20 +38,26 @@ export default function Home() {
         <div className={styles.incomplete_area}>
           <p className={styles.title}>TODO</p>
           {displayTodos.map((todo, index) => {
+            // todo → {label: "文字列", isDone: true か false }
             return (
               <ul key={index} className={styles.list_row}>
                 <div className={styles.IncompleteTodosFlex}>
                   <button
                     className={styles.compDleteButton}
                     onClick={() => {
-                      setCheckFlag((checkFlag) => !checkFlag);
-                      alert(checkFlag);
+                      const newTodos = displayTodos.map((todo, i) => {
+                        return {
+                          ...todo,
+                          isDone: index === i ? !todo.isDone : todo.isDone,
+                        };
+                      });
+                      setDisplayTodos(newTodos);
                     }}
                   >
                     {/* {checkFlag ? "\u2714" : null} */}
-                    {checkFlag && "\u2714"}
+                    {todo.isDone && "\u2714"}
                   </button>
-                  <li>{todo}</li>
+                  <li>{todo.label}</li>
                 </div>
                 <button
                   className={styles.compDleteButton}
