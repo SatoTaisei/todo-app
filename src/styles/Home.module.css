@@ -1,7 +1,5 @@
 .container {
-  /* min-height: 100vh; */
   width: auto;
-  /* padding: 0 0.5rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +21,6 @@
 
 .main {
   width: 375px;
-  /* width: auto; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,11 +76,12 @@
 }
 
 .compDleteButton {
-  /* color: #333; */
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  font-size: medium;
+  font-size: x-large;
+  line-height: 32px;
+  text-align: center;
   border: none;
   margin: 0 4px;
 }
@@ -92,24 +90,17 @@
   cursor: pointer;
 }
 
-.imcomplete_area {
+.incomplete_area {
   background-color: #90b4ce;
   width: 96%;
-  min-height: 200px;
-  height: 40vh;
+  min-height: 70vh;
+  max-height: 80vh;
+  margin-bottom: 20px;
 }
 
 .IncompleteTodosFlex {
   display: flex;
   align-items: center;
-}
-
-.complete_area {
-  background-color: #ffffe0;
-  width: 96%;
-  min-height: 200px;
-  height: 40vh;
-  border-radius: 8px;
 }
 
 .title {
